@@ -8,6 +8,7 @@ using NorfolkCache.History;
 using NorfolkCache.Services;
 using NorfolkCache.Services.CacheHistory;
 using NorfolkCache.Services.CacheLog;
+using NorfolkCache.SpecialServices;
 using NorfolkCacheWebApp.Controllers;
 
 namespace NorfolkCacheWebApp
@@ -47,8 +48,7 @@ namespace NorfolkCacheWebApp
             var cacheServiceLog = new CacheServiceTraceLog(cacheServiceHistory);
             builder.RegisterInstance(cacheServiceLog).As<ICacheService>().SingleInstance();
 
-            // TODO: Add NorfolkCache.SpecialServices to the solution, reference the project and uncomment the line below.
-            // builder.RegisterInstance(new MyService("ServiceName")).As<IMyService>().SingleInstance();
+            builder.RegisterInstance(new MyService("ServiceName")).As<IMyService>().SingleInstance();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
