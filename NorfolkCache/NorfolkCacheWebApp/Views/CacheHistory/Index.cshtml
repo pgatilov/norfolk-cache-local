@@ -1,0 +1,15 @@
+﻿<table class="table">
+    <thead><tr><th>Date</th><th>Action</th><th>Namespace</th><th>Key</th><th>Value</th></tr></thead>
+    <tbody>
+        @foreach (var r in @ViewBag.Records)
+            {
+            <tr>
+                <td>-</td>
+                <td>@r.Action</td>
+                <td>@r.Namespace</td>
+                <td>@r.Key</td>
+                <td>@r.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>

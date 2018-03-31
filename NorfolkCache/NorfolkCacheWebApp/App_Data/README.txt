@@ -1,0 +1,1 @@
+﻿This file is needed to create App_Data folder on Azure Web Site after deploy.
