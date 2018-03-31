@@ -7,7 +7,7 @@ namespace NorfolkCache.SpecialServices
         private readonly string _name;
 
         public MyService(string name)
-        {
+        { 
             _name = name ?? throw new ArgumentNullException(nameof(name));
         }
 
